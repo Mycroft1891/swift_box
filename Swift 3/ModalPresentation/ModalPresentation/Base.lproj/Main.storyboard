@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ModalPresentation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPu-he-f79">
+                                <rect key="frame" x="164" y="318" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="popUpModal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2hm-eE-uLx"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zip Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kUy-2m-xP8">
+                                <rect key="frame" x="16" y="28" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" keyboardType="numberPad" keyboardAppearance="alert"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Money" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wZB-Xh-bWS">
+                                <rect key="frame" x="16" y="66" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" keyboardType="numberPad" keyboardAppearance="alert"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sentence" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IqW-Gx-pgK">
+                                <rect key="frame" x="16" y="104" width="286" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V2D-WW-Jvi">
+                                <rect key="frame" x="310" y="104" width="51" height="31"/>
+                                <connections>
+                                    <action selector="sentenceSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="zsv-Iv-fG7"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wZB-Xh-bWS" firstAttribute="leading" secondItem="IqW-Gx-pgK" secondAttribute="leading" id="2f7-aR-Eed"/>
+                            <constraint firstItem="V2D-WW-Jvi" firstAttribute="leading" secondItem="IqW-Gx-pgK" secondAttribute="trailing" constant="8" symbolic="YES" id="3Iy-1I-LJF"/>
+                            <constraint firstItem="kUy-2m-xP8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="3j0-o0-QXS"/>
+                            <constraint firstItem="kUy-2m-xP8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9sE-tq-54h"/>
+                            <constraint firstItem="kUy-2m-xP8" firstAttribute="trailing" secondItem="wZB-Xh-bWS" secondAttribute="trailing" id="Gru-6C-Slr"/>
+                            <constraint firstItem="kUy-2m-xP8" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Oc5-M0-S7s"/>
+                            <constraint firstItem="IqW-Gx-pgK" firstAttribute="top" secondItem="V2D-WW-Jvi" secondAttribute="top" id="OyI-rG-58F"/>
+                            <constraint firstItem="wZB-Xh-bWS" firstAttribute="centerX" secondItem="WPu-he-f79" secondAttribute="centerX" id="P0E-Cy-efB"/>
+                            <constraint firstItem="kUy-2m-xP8" firstAttribute="leading" secondItem="wZB-Xh-bWS" secondAttribute="leading" id="R4E-n0-pvC"/>
+                            <constraint firstItem="wZB-Xh-bWS" firstAttribute="top" secondItem="kUy-2m-xP8" secondAttribute="bottom" constant="8" symbolic="YES" id="dWo-vk-Qbf"/>
+                            <constraint firstItem="wZB-Xh-bWS" firstAttribute="trailing" secondItem="V2D-WW-Jvi" secondAttribute="trailing" id="lsX-r9-sLF"/>
+                            <constraint firstItem="IqW-Gx-pgK" firstAttribute="top" secondItem="wZB-Xh-bWS" secondAttribute="bottom" constant="8" symbolic="YES" id="nNO-gT-MXC"/>
+                            <constraint firstItem="WPu-he-f79" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="prG-ai-leu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="moneyField" destination="wZB-Xh-bWS" id="b6h-Cv-h8u"/>
+                        <outlet property="sentenceField" destination="IqW-Gx-pgK" id="iOz-sA-Lwl"/>
+                        <outlet property="zipCode" destination="kUy-2m-xP8" id="tVl-E6-UVI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>

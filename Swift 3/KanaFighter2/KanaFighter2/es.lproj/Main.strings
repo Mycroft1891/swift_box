@@ -1,0 +1,78 @@
+
+/* Class = "UIButton"; normalTitle = "Twitter"; ObjectID = "0l9-4Z-jzL"; */
+"0l9-4Z-jzL.normalTitle" = "Twitter";
+
+/* Class = "UILabel"; text = "share with your Friends:"; ObjectID = "3nM-mN-tDp"; */
+"3nM-mN-tDp.text" = "share with your Friends:";
+
+/* Class = "UILabel"; text = "How to Play"; ObjectID = "4Ot-tj-Tfk"; */
+"4Ot-tj-Tfk.text" = "How to Play";
+
+/* Class = "UILabel"; text = "GAME OVER"; ObjectID = "8lv-d7-Pdw"; */
+"8lv-d7-Pdw.text" = "GAME OVER";
+
+/* Class = "UILabel"; text = "POINTS"; ObjectID = "ABO-IP-aPx"; */
+"ABO-IP-aPx.text" = "POINTS";
+
+/* Class = "UILabel"; text = "LIVES"; ObjectID = "DlC-fy-GDR"; */
+"DlC-fy-GDR.text" = "LIVES";
+
+/* Class = "UIButton"; normalTitle = "Menu"; ObjectID = "GCf-iV-IK7"; */
+"GCf-iV-IK7.normalTitle" = "Menu";
+
+/* Class = "UITextView"; text = "Playing is simple: first choose between Hiragan and KatakanaPlaying is simple: first choose between Hiragan and KatakanaPlaying is simple: first choose between Hiragan and KatakanaPlaying is simple: first choose between Hiragan and KatakanaPlaying is simple: first choose between Hiragan and KatakanaPlaying is simple: first choose between Hiragan and KatakanaPlaying is simple: first choose between Hiragan and KatakanaPlaying is simple: first choose between Hiragan and KatakanaPlaying is simple: first choose between Hiragan and KatakanaPlaying is simple: first choose between Hiragan and Katakana"; ObjectID = "Ian-GH-CrY"; */
+"Ian-GH-CrY.text" = "Playing is simple: first choose between Hiragan and KatakanaPlaying is simple: first choose between Hiragan and KatakanaPlaying is simple: first choose between Hiragan and KatakanaPlaying is simple: first choose between Hiragan and KatakanaPlaying is simple: first choose between Hiragan and KatakanaPlaying is simple: first choose between Hiragan and KatakanaPlaying is simple: first choose between Hiragan and KatakanaPlaying is simple: first choose between Hiragan and KatakanaPlaying is simple: first choose between Hiragan and KatakanaPlaying is simple: first choose between Hiragan and Katakana";
+
+/* Class = "UILabel"; text = "1000"; ObjectID = "InD-Si-AUO"; */
+"InD-Si-AUO.text" = "1000";
+
+/* Class = "UILabel"; text = "LIVES"; ObjectID = "LaQ-zw-0vj"; */
+"LaQ-zw-0vj.text" = "LIVES";
+
+/* Class = "UIButton"; normalTitle = "Facebook"; ObjectID = "MWF-Pc-FrF"; */
+"MWF-Pc-FrF.normalTitle" = "Facebook";
+
+/* Class = "UIButton"; normalTitle = "How to Play"; ObjectID = "NQt-VO-gqO"; */
+"NQt-VO-gqO.normalTitle" = "How to Play";
+
+/* Class = "UILabel"; text = "Kana Fighter"; ObjectID = "Nt0-Su-fLu"; */
+"Nt0-Su-fLu.text" = "Kana Fighter";
+
+/* Class = "UIButton"; normalTitle = "Katakana"; ObjectID = "OdO-bn-p6a"; */
+"OdO-bn-p6a.normalTitle" = "Katakana";
+
+/* Class = "UIButton"; normalTitle = "Return"; ObjectID = "Qq4-1M-OHz"; */
+"Qq4-1M-OHz.normalTitle" = "Return";
+
+/* Class = "UILabel"; text = "POINTS"; ObjectID = "Ufx-Li-2IX"; */
+"Ufx-Li-2IX.text" = "POINTS";
+
+/* Class = "UIButton"; normalTitle = "Katakana"; ObjectID = "Ykt-fF-reh"; */
+"Ykt-fF-reh.normalTitle" = "Katakana";
+
+/* Class = "UILabel"; text = "1000"; ObjectID = "gfh-jF-cb1"; */
+"gfh-jF-cb1.text" = "1000";
+
+/* Class = "UILabel"; text = "You scored: lekrglekgkeljrglekjr In the Kana Fighter App"; ObjectID = "hrO-my-gzD"; */
+"hrO-my-gzD.text" = "You scored: lekrglekgkeljrglekjr In the Kana Fighter App";
+
+/* Class = "UILabel"; text = "Share Score with Friends:"; ObjectID = "jLJ-UO-KmS"; */
+"jLJ-UO-KmS.text" = "Share Score with Friends:";
+
+/* Class = "UILabel"; text = "1000"; ObjectID = "qIA-tP-f4F"; */
+"qIA-tP-f4F.text" = "1000";
+
+/* Class = "UIButton"; normalTitle = "Hiragana"; ObjectID = "rhU-1Z-C4x"; */
+"rhU-1Z-C4x.normalTitle" = "Hiragana";
+
+/* Class = "UIButton"; normalTitle = "Hiragana"; ObjectID = "vXx-bP-JER"; */
+"vXx-bP-JER.normalTitle" = "Hiragana";
+
+/* Class = "UIButton"; normalTitle = "Twitter"; ObjectID = "vsq-lV-gFa"; */
+"vsq-lV-gFa.normalTitle" = "Twitter";
+
+/* Class = "UILabel"; text = "1000"; ObjectID = "wio-ky-Be2"; */
+"wio-ky-Be2.text" = "1000";
+
+/* Class = "UIButton"; normalTitle = "Facebook"; ObjectID = "ybV-tg-q0D"; */
+"ybV-tg-q0D.normalTitle" = "Facebook";
