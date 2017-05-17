@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "48D6B7DBDA2D4081223E97B330159F70E24A0318",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "48D6B7DBDA2D4081223E97B330159F70E24A0318" : 9223372036854775807,
+    "CDC511D3655E936965928474EC9C5CDE54667215" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "763A8221-3FF8-4EDA-B2B3-A110C4B65173",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "48D6B7DBDA2D4081223E97B330159F70E24A0318" : "Xylophone\/",
+    "CDC511D3655E936965928474EC9C5CDE54667215" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Xylophone",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Xylophone.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/londonappbrewery\/xylophone.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "48D6B7DBDA2D4081223E97B330159F70E24A0318"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Mycroft1891\/swift_box.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CDC511D3655E936965928474EC9C5CDE54667215"
+    }
+  ]
+}
