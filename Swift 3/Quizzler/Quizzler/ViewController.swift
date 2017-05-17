@@ -1,14 +1,11 @@
-
 import UIKit
 
 class ViewController: UIViewController {
     
-    //Place your instance variables here
     let allQuestions = QuestionBank()
     var pickedAnswer : Bool = false
     var questionNumber : Int = 0
     var score : Int = 0
-    
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -17,7 +14,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         nextQuestion()
     }
 
@@ -42,10 +38,8 @@ class ViewController: UIViewController {
 
     func nextQuestion() {
         if questionNumber <= 12 {
-            
             questionLabel.text = allQuestions.list[questionNumber].question
             updateUI()
-            
         } else {
             let alert = UIAlertController(
                 title: "GAME OVER",
@@ -56,9 +50,8 @@ class ViewController: UIViewController {
             let restartAction = UIAlertAction(
                 title: "Play again",
                 style: .default,
-                handler: { (UIAlertAction) in
-                self.startOver()
-            })
+                handler: { (UIAlertAction) in self.startOver() }
+            )
             
             alert.addAction(restartAction)
             present(alert, animated: true, completion: nil)
@@ -70,18 +63,16 @@ class ViewController: UIViewController {
         let correctAnswer = allQuestions.list[questionNumber].answer
         if pickedAnswer == correctAnswer {
             score += 1
-            print("You got it right")
+            ProgressHUD.showSuccess("You got it right")
         } else {
-            print("You go it wrong")
+            ProgressHUD.showError("You got it wrong")
         }
-        
     }
-    
+
     
     func startOver() {
         questionNumber = 0
         score = 0
         nextQuestion()
     }
-    
 }
