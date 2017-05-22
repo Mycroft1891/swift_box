@@ -6,8 +6,15 @@
 //  Copyright © 2017 Sascha Luna. All rights reserved.
 //
 
-import UIKit
+import SpriteKit
 
 class MainMenu: SKScene {
 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let game : GameScene = GameScene(fileNamed: "GameScene") {
+            game.scaleMode = .aspectFill
+            let transition : SKTransition = SKTransition.crossFade(withDuration: 1)
+            self.view?.presentScene(game, transition: transition)
+        }
+    }
 }
