@@ -9,16 +9,47 @@
 import UIKit
 
 class KanaViewController: UIViewController {
+    
+    var hiragana : Bool = true
+    
+    var answerIndex : Int = 0
+    
+    let romanjiArray : [String] = [
+        "KA", "KI", "KU", "KE", "KO",
+        "SA", "SHI", "SU", "SE", "SO",
+        "TA", "CHI", "TSU", "TE", "TO"
+    ]
+    
+    let hiraganaArray : [String] = [
+        "か", "き", "く", "け", "こ",
+        "さ", "し", "す", "せ", "そ",
+        "た", "ち", "つ", "て", "と"
+    ]
+    
+    let katakanaArray : [String] = [
+        "カ", "キ", "ク", "ケ", "コ",
+        "サ", "シ", "ス", "セ", "ソ",
+        "タ", "チ", "ツ", "テ", "ト"
+    ]
+    
+    var kana : [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if hiragana {
+            kana = hiraganaArray
+        } else {
+            kana = katakanaArray
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func returnButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
 
