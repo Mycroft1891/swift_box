@@ -8,11 +8,29 @@
 
 import UIKit
 
+protocol gameOverDelegate {
+    func gameOverScreen(score: Int)
+}
+
 class KanaViewController: UIViewController {
     
-    var hiragana : Bool = true
+    var delegate: gameOverDelegate?
     
+    var hiragana : Bool = true
     var answerIndex : Int = 0
+    var questionArray: [Int] = []
+    
+    var lifeArray = ["♥️","♥️","♥️","♥️","♥️"]
+    var score : Int = 0
+    
+    @IBOutlet weak var questionDisplay: UILabel!
+    @IBOutlet weak var liveLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
+    
+    @IBOutlet weak var choice1: UIButton!
+    @IBOutlet weak var choice2: UIButton!
+    @IBOutlet weak var choice3: UIButton!
+    @IBOutlet weak var choice4: UIButton!
     
     let romanjiArray : [String] = [
         "KA", "KI", "KU", "KE", "KO",
@@ -36,21 +54,84 @@ class KanaViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if hiragana {
-            kana = hiraganaArray
-        } else {
-            kana = katakanaArray
-        }
+        
+        kana = hiragana ? hiraganaArray : katakanaArray
+        pickRandomQuestionAndAnswer()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    @IBAction func returnButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+
+    @IBAction func answerButtonPressed(_ sender: AnyObject) {
+        
+        switch sender.tag {
+        case 1:
+            checkAnswer(buttonIndex: 0)
+            break
+        case 2:
+            checkAnswer(buttonIndex: 1)
+            break
+        case 3:
+            checkAnswer(buttonIndex: 2)
+            break
+        case 4:
+            checkAnswer(buttonIndex: 3)
+        default:
+            break
+        }
     }
+    
+    func pickRandomQuestionAndAnswer() {
+        while questionArray.count < 4 {
+            let randomNumber = arc4random_uniform(UInt32(kana.count))
+            if !questionArray.contains(Int(randomNumber)) {
+                questionArray.append(Int(randomNumber))
+            }
+        }
+        print(questionArray)
+        let randomAnswer = Int(arc4random_uniform(UInt32(questionArray.count)))
+        answerIndex = questionArray[randomAnswer]
+        configureUI()
+    }
+    
+    func configureUI() {
+        
+        let first   = kana[questionArray[0]]
+        let second  = kana[questionArray[1]]
+        let third   = kana[questionArray[2]]
+        let fourth  = kana[questionArray[3]]
+        
+        choice1.setTitle(first, for: .normal)
+        choice2.setTitle(second, for: .normal)
+        choice3.setTitle(third, for: .normal)
+        choice4.setTitle(fourth, for: .normal)
+        
+        questionDisplay.text = romanjiArray[answerIndex]
+        scoreLabel.text = "Score: " + String(score)
+        liveLabel.text = lifeArray.joined(separator: "")
+    }
+    
+    func checkAnswer(buttonIndex: Int) {
+        print("Answer: \(answerIndex) | Question: \(questionArray[buttonIndex])")
+        if answerIndex == questionArray[buttonIndex] {
+            score += 1
+        } else {
+            lifeArray.popLast()
+        }
+        
+        questionArray = []
+        pickRandomQuestionAndAnswer()
+        
+        if lifeArray.count <= 0 {
+            print("GAME OVER")
+            delegate?.gameOverScreen(score: score)
+            self.dismiss(animated: true, completion: nil)
+        }
+    
+    }
+    
     
 
     /*

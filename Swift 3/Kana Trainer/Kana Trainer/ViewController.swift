@@ -8,12 +8,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, gameOverDelegate {
+    
+    @IBOutlet weak var gameOverLabel: UILabel!
+    @IBOutlet weak var gameScoreLabel: UILabel!
     
     var hiragana : Bool = true
+    var gameOver : Bool = false
+    var gamePoints : Int = 0;
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureUI()
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,6 +46,23 @@ class ViewController: UIViewController {
         }
     }
     
+    func configureUI() {
+        if gameOver {
+            gameOverLabel.text = "Game Over"
+            gameScoreLabel.text = "Your score: " + String(gamePoints)
+        } else {
+            gameOverLabel.text = ""
+            gameScoreLabel.text = ""
+        }
+    }
+    
+    func gameOverScreen(score: Int) {
+        gameOver = true
+        gamePoints = score
+        
+        configureUI()
+    }
+    
     
     func customSegue(isHiragana: Bool) {
         hiragana = isHiragana
@@ -54,6 +78,7 @@ class ViewController: UIViewController {
 
         let destination = segue.destination as! KanaViewController
         destination.hiragana = self.hiragana
+        destination.delegate = self
     }
 
 }
