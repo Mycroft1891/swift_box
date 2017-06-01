@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Social
 
 class ViewController: UIViewController, gameOverDelegate {
     
@@ -19,7 +20,6 @@ class ViewController: UIViewController, gameOverDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configureUI()
     }
 
@@ -40,20 +40,22 @@ class ViewController: UIViewController, gameOverDelegate {
         case 3:
             // how to play button
             print("How to play button")
+            performSegue(withIdentifier: "showRules", sender: self)
             break
         default:
             break
         }
     }
     
+    @IBAction func shareButtonPressed(_ sender: AnyObject) {
+        let social : Bool = sender.tag == 5 ? true : false
+        shareAction(isTwitter: social)
+    }
+    
+    
     func configureUI() {
-        if gameOver {
-            gameOverLabel.text = "Game Over"
-            gameScoreLabel.text = "Your score: " + String(gamePoints)
-        } else {
-            gameOverLabel.text = ""
-            gameScoreLabel.text = ""
-        }
+        gameOverLabel.text  = gameOver ? "Game Over" : ""
+        gameScoreLabel.text = gameOver ? "Your score: \(gamePoints)" : ""
     }
     
     func gameOverScreen(score: Int) {
@@ -61,6 +63,30 @@ class ViewController: UIViewController, gameOverDelegate {
         gamePoints = score
         
         configureUI()
+    }
+    
+    func shareAction(isTwitter: Bool) {
+        
+        let socialMedia: String = isTwitter ? "Twitter" : "Facebook"
+        let service: String = isTwitter ? SLServiceTypeTwitter : SLServiceTypeFacebook
+        
+        let alert = UIAlertController(
+            title: "Share on \(socialMedia)",
+            message: "Share my awesome score",
+            preferredStyle: .actionSheet)
+        
+        let action = UIAlertAction(title: "Share on \(socialMedia)", style: .default) { action in
+            
+            let slcPost = SLComposeViewController(forServiceType: service)
+            if let post = slcPost {
+                
+                post.setInitialText("I scored \(self.gamePoints) on Kana Fighter.")
+                self.present(post, animated: true, completion: nil)
+            }
+        }
+        
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
     }
     
     
@@ -75,10 +101,11 @@ class ViewController: UIViewController, gameOverDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-        let destination = segue.destination as! KanaViewController
-        destination.hiragana = self.hiragana
-        destination.delegate = self
+        if segue.identifier == "showKana" {
+            let destination = segue.destination as! KanaViewController
+            destination.hiragana = self.hiragana
+            destination.delegate = self
+        }
     }
 
 }

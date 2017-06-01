@@ -13,6 +13,7 @@
 		9E6183DF1ED2A87C008ABD1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E6183DE1ED2A87C008ABD1B /* Assets.xcassets */; };
 		9E6183E21ED2A87C008ABD1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E6183E01ED2A87C008ABD1B /* LaunchScreen.storyboard */; };
 		9E6183EA1ED2ADF2008ABD1B /* KanaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6183E91ED2ADF2008ABD1B /* KanaViewController.swift */; };
+		9EDD5D641EDF7A560018CAC7 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDD5D631EDF7A560018CAC7 /* RulesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		9E6183E11ED2A87C008ABD1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E6183E31ED2A87C008ABD1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E6183E91ED2ADF2008ABD1B /* KanaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KanaViewController.swift; sourceTree = "<group>"; };
+		9EDD5D631EDF7A560018CAC7 /* RulesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				9E6183D71ED2A87C008ABD1B /* AppDelegate.swift */,
 				9E6183D91ED2A87C008ABD1B /* ViewController.swift */,
 				9E6183E91ED2ADF2008ABD1B /* KanaViewController.swift */,
+				9EDD5D631EDF7A560018CAC7 /* RulesViewController.swift */,
 				9E6183DB1ED2A87C008ABD1B /* Main.storyboard */,
 				9E6183DE1ED2A87C008ABD1B /* Assets.xcassets */,
 				9E6183E01ED2A87C008ABD1B /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 			files = (
 				9E6183EA1ED2ADF2008ABD1B /* KanaViewController.swift in Sources */,
 				9E6183DA1ED2A87C008ABD1B /* ViewController.swift in Sources */,
+				9EDD5D641EDF7A560018CAC7 /* RulesViewController.swift in Sources */,
 				9E6183D81ED2A87C008ABD1B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,6 +310,7 @@
 				9E6183E81ED2A87C008ABD1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
