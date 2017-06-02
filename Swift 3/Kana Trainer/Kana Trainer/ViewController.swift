@@ -29,23 +29,21 @@ class ViewController: UIViewController, gameOverDelegate {
 
     @IBAction func menuButtonPressed(_ sender: AnyObject) {
         switch sender.tag {
-        case 1:
-            // hiragan button
-            customSegue(isHiragana: true)
-            break
-        case 2:
-            // katakana button
-            customSegue(isHiragana: false)
-            break
-        case 3:
-            // how to play button
-            print("How to play button")
-            performSegue(withIdentifier: "showRules", sender: self)
-            break
-        default:
-            break
+            case 1:
+                // hiragan button
+                customSegue(isHiragana: true)
+            case 2:
+                // katakana button
+                customSegue(isHiragana: false)
+            case 3:
+                // how to play button
+                print("How to play button")
+                performSegue(withIdentifier: "showRules", sender: self)
+            default:
+                break
         }
     }
+    
     
     @IBAction func shareButtonPressed(_ sender: AnyObject) {
         let social : Bool = sender.tag == 5 ? true : false
@@ -61,7 +59,6 @@ class ViewController: UIViewController, gameOverDelegate {
     func gameOverScreen(score: Int) {
         gameOver = true
         gamePoints = score
-        
         configureUI()
     }
     
@@ -71,15 +68,14 @@ class ViewController: UIViewController, gameOverDelegate {
         let service: String = isTwitter ? SLServiceTypeTwitter : SLServiceTypeFacebook
         
         let alert = UIAlertController(
-            title: "Share on \(socialMedia)",
-            message: "Share my awesome score",
-            preferredStyle: .actionSheet)
+                        title: "Share on \(socialMedia)",
+                        message: "Share my awesome score",
+                        preferredStyle: .actionSheet)
         
         let action = UIAlertAction(title: "Share on \(socialMedia)", style: .default) { action in
             
             let slcPost = SLComposeViewController(forServiceType: service)
             if let post = slcPost {
-                
                 post.setInitialText("I scored \(self.gamePoints) on Kana Fighter.")
                 self.present(post, animated: true, completion: nil)
             }
@@ -93,11 +89,8 @@ class ViewController: UIViewController, gameOverDelegate {
     func customSegue(isHiragana: Bool) {
         hiragana = isHiragana
         performSegue(withIdentifier: "showKana", sender: self)
-        if isHiragana {
-            print("Hiragana Button Pressed")
-        } else {
-            print("Katakana Button Pressed")
-        }
+        let kanaText = isHiragana ? "Hiragana" : "Katakana"
+        print("\(kanaText) Button Pressed")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

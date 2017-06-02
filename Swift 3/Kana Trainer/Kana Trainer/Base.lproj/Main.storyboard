@@ -310,6 +310,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="oct-Xf-elC" appends="YES" id="qm0-Dh-vcJ"/>
+                                            <outletCollection property="gestureRecognizers" destination="cUi-pW-GBt" appends="YES" id="FM0-up-PK3"/>
                                         </connections>
                                     </textView>
                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="xmk-9c-Rwt">
@@ -344,7 +345,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s7Q-HT-hls" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="oct-Xf-elC"/>
+                <swipeGestureRecognizer direction="right" id="oct-Xf-elC" userLabel="right swipe">
+                    <connections>
+                        <action selector="rightSwipe:" destination="IvW-Lf-DYs" id="okB-RV-YqR"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="cUi-pW-GBt" userLabel="left swipe">
+                    <connections>
+                        <action selector="leftSwipe:" destination="IvW-Lf-DYs" id="g63-3Y-neU"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1569.5652173913045" y="37.5"/>
         </scene>
