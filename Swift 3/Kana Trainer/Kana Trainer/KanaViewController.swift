@@ -16,21 +16,20 @@ class KanaViewController: UIViewController {
     
     var delegate: gameOverDelegate?
     
-    var hiragana : Bool = true
-    var answerIndex : Int = 0
-    var questionArray: [Int] = []
+    var hiragana    : Bool  = true
+    var answerIndex : Int   = 0
+    var questions   : [Int] = []
+    var seconds     : Int   = 60
+    var timer       : Timer = Timer()
     
     var lifeArray = ["♥️","♥️","♥️","♥️","♥️"]
     var score : Int = 0
     
+    @IBOutlet var choiceArray: [UIButton]!
     @IBOutlet weak var questionDisplay: UILabel!
     @IBOutlet weak var liveLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
-    
-    @IBOutlet weak var choice1: UIButton!
-    @IBOutlet weak var choice2: UIButton!
-    @IBOutlet weak var choice3: UIButton!
-    @IBOutlet weak var choice4: UIButton!
+    @IBOutlet weak var timeCounter: UILabel!
     
     let romanjiArray : [String] = [
         "KA", "KI", "KU", "KE", "KO",
@@ -54,9 +53,11 @@ class KanaViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         kana = hiragana ? hiraganaArray : katakanaArray
         pickRandomQuestionAndAnswer()
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+            self.timerLogic()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,48 +71,59 @@ class KanaViewController: UIViewController {
     
     
     func checkAnswer(buttonIndex: Int) {
-        print("Answer: \(answerIndex) | Question: \(questionArray[buttonIndex])")
-        if answerIndex == questionArray[buttonIndex] {
+        print("Answer: \(answerIndex) | Question: \(questions[buttonIndex])")
+        if answerIndex == questions[buttonIndex] {
             score += 1
+            seconds += 2
         } else {
             lifeArray.removeLast()
         }
         
-        questionArray = []
+        questions = []
         pickRandomQuestionAndAnswer()
         
-        if lifeArray.count <= 0 {
-            print("GAME OVER")
-            delegate?.gameOverScreen(score: score)
-            self.dismiss(animated: true, completion: nil)
-        }
+        lifeArray.count <= 0 ? gameOver() : print("nothing")
     }
     
     
     func pickRandomQuestionAndAnswer() {
-        while questionArray.count < 4 {
+        while questions.count < 4 {
             let randomNumber : Int = Int(arc4random_uniform(UInt32(kana.count)))
-            if !questionArray.contains(randomNumber) {
-                questionArray.append(randomNumber)
+            if !questions.contains(randomNumber) {
+                questions.append(randomNumber)
             }
         }
-        print(questionArray)
-        let randomAnswer = Int(arc4random_uniform(UInt32(questionArray.count)))
-        answerIndex = questionArray[randomAnswer]
+        print(questions)
+        let randomAnswer = Int(arc4random_uniform(UInt32(questions.count)))
+        answerIndex = questions[randomAnswer]
         configureUI()
     }
     
     
     func configureUI() {
-                
-        choice1.setTitle(kana[questionArray[0]], for: .normal)
-        choice2.setTitle(kana[questionArray[1]], for: .normal)
-        choice3.setTitle(kana[questionArray[2]], for: .normal)
-        choice4.setTitle(kana[questionArray[3]], for: .normal)
         
+        for (index, choice) in questions.enumerated() {
+            choiceArray[index].setTitle(kana[choice], for: .normal)
+        }
         questionDisplay.text = romanjiArray[answerIndex]
         scoreLabel.text = "Score: " + String(score)
         liveLabel.text = lifeArray.joined(separator: "")
+    }
+    
+    func gameOver() {
+        print("GAME OVER")
+        delegate?.gameOverScreen(score: score)
+        self.dismiss(animated: true, completion: nil)
+        timer.invalidate()
+    }
+    
+    func timerLogic() {
+        if seconds > 0 {
+            timeCounter.text = String(seconds)
+            seconds -= 1
+        } else {
+            gameOver()
+        }
     }
     
 }
