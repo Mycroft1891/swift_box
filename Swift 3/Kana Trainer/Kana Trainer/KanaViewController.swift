@@ -55,24 +55,20 @@ class KanaViewController: UIViewController {
         super.viewDidLoad()
         kana = hiragana ? hiraganaArray : katakanaArray
         pickRandomQuestionAndAnswer()
-        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
-            self.timerLogic()
-        }
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in self.timerLogic() }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-
     @IBAction func answerButtonPressed(_ sender: AnyObject) {
         checkAnswer(buttonIndex: sender.tag - 1)
     }
     
-    
     func checkAnswer(buttonIndex: Int) {
         print("Answer: \(answerIndex) | Question: \(questions[buttonIndex])")
-        if answerIndex == questions[buttonIndex] {
+        if answerIndex == questions[buttonIndex]  {
             score += 1
             seconds += 2
         } else {
@@ -81,10 +77,8 @@ class KanaViewController: UIViewController {
         
         questions = []
         pickRandomQuestionAndAnswer()
-        
         lifeArray.count <= 0 ? gameOver() : print("nothing")
     }
-    
     
     func pickRandomQuestionAndAnswer() {
         while questions.count < 4 {
@@ -99,15 +93,14 @@ class KanaViewController: UIViewController {
         configureUI()
     }
     
-    
     func configureUI() {
         
         for (index, choice) in questions.enumerated() {
             choiceArray[index].setTitle(kana[choice], for: .normal)
         }
         questionDisplay.text = romanjiArray[answerIndex]
-        scoreLabel.text = "Score: " + String(score)
-        liveLabel.text = lifeArray.joined(separator: "")
+        scoreLabel.text = " Score: " + String(score)
+        liveLabel.text = " " + lifeArray.joined(separator: "")
     }
     
     func gameOver() {
@@ -118,12 +111,9 @@ class KanaViewController: UIViewController {
     }
     
     func timerLogic() {
-        if seconds > 0 {
+        guard seconds > 0 else { gameOver(); return }
             timeCounter.text = String(seconds)
             seconds -= 1
-        } else {
-            gameOver()
-        }
     }
     
 }

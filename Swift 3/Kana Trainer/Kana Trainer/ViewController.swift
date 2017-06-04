@@ -28,28 +28,23 @@ class ViewController: UIViewController, gameOverDelegate {
     }
 
     @IBAction func menuButtonPressed(_ sender: AnyObject) {
+        // 1 = hiragana | 2 = katakan | 3 = how to play
         switch sender.tag {
             case 1:
-                // hiragan button
                 customSegue(isHiragana: true)
             case 2:
-                // katakana button
                 customSegue(isHiragana: false)
             case 3:
-                // how to play button
-                print("How to play button")
                 performSegue(withIdentifier: "showRules", sender: self)
             default:
                 break
         }
     }
     
-    
     @IBAction func shareButtonPressed(_ sender: AnyObject) {
         let social : Bool = sender.tag == 5 ? true : false
         shareAction(isTwitter: social)
     }
-    
     
     func configureUI() {
         gameOverLabel.text  = gameOver ? "Game Over" : ""
@@ -68,23 +63,20 @@ class ViewController: UIViewController, gameOverDelegate {
         let service: String = isTwitter ? SLServiceTypeTwitter : SLServiceTypeFacebook
         
         let alert = UIAlertController(
-                        title: "Share on \(socialMedia)",
-                        message: "Share my awesome score",
-                        preferredStyle: .actionSheet)
+                title: "Share on \(socialMedia)",
+                message: "Share my awesome score" ,
+                preferredStyle: .actionSheet)
         
         let action = UIAlertAction(title: "Share on \(socialMedia)", style: .default) { action in
-            
             let slcPost = SLComposeViewController(forServiceType: service)
-            if let post = slcPost {
+            guard let post = slcPost else { return }
                 post.setInitialText("I scored \(self.gamePoints) on Kana Fighter.")
                 self.present(post, animated: true, completion: nil)
-            }
         }
         
         alert.addAction(action)
         self.present(alert, animated: true, completion: nil)
     }
-    
     
     func customSegue(isHiragana: Bool) {
         hiragana = isHiragana
@@ -94,11 +86,10 @@ class ViewController: UIViewController, gameOverDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showKana" {
+        guard segue.identifier == "showKana" else { print("How to Play"); return }
             let destination = segue.destination as! KanaViewController
             destination.hiragana = self.hiragana
             destination.delegate = self
-        }
     }
 
 }

@@ -32,28 +32,24 @@ class RulesViewController: UIViewController {
     @IBAction func rightSwipe(_ sender: UISwipeGestureRecognizer) {
         print("Swiped Right")
         guard paginationControl.currentPage > 0 else { return }
-        paginationControl.currentPage -= 1
-        setText(forPage: paginationControl.currentPage)
+            paginationControl.currentPage -= 1
+            setText(forPage: paginationControl.currentPage)
     }
-    
     
     @IBAction func leftSwipe(_ sender: UIGestureRecognizer) {
         print("Swiped Left")
         guard paginationControl.currentPage < paginationControl.numberOfPages - 1 else { return }
-        paginationControl.currentPage += 1
-        setText(forPage: paginationControl.currentPage)
+            paginationControl.currentPage += 1
+            setText(forPage: paginationControl.currentPage)
         
     }
-    
     
     @IBAction func returnMenuPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    
     func setText(forPage: Int) {
         rulesPrompt.text = rulesText[forPage]
     }
-
     
 }
