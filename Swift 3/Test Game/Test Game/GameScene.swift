@@ -18,6 +18,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func didMove(to view: SKView) {
         cannon = self.childNode(withName: "cannon") as! SKSpriteNode
 //        ball = self.childNode(withName: "ball") as! SKSpriteNode
+        self.physicsWorld.contactDelegate = self
     }
     
     func touchDown(atPoint pos : CGPoint) {
@@ -72,5 +73,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let newAngle = percent * 180 - 90
         cannon.zRotation = CGFloat(newAngle) * .pi / 180.0
         
+    }
+    
+    func didBegin(_ contact: SKPhysicsContact) {
+        print("Contact")
     }
 }

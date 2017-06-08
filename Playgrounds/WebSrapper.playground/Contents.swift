@@ -18,3 +18,10 @@ let task = URLSession.shared.dataTask(with: url) { data, response, error in
 }
 
 task.resume()
+
+
+//var bits: UInt32 = 0x1
+//bits << 1
+//bits << 2
+//bits << 3
+//bits << 4
