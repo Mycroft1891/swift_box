@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E0A20EA1EEB493B0066FAD8 /* explosion.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9E0A20E91EEB493B0066FAD8 /* explosion.wav */; };
+		9E0A20ED1EEB4A880066FAD8 /* shoot.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9E0A20EC1EEB4A880066FAD8 /* shoot.wav */; };
+		9E0A20EF1EEB4BF70066FAD8 /* bg.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9E0A20EE1EEB4BF70066FAD8 /* bg.mp3 */; };
 		9E0BD3CD1ED05C730076AC3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0BD3CC1ED05C730076AC3A /* AppDelegate.swift */; };
 		9E0BD3D31ED05C730076AC3A /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0BD3D21ED05C730076AC3A /* GameScene.swift */; };
 		9E0BD3D51ED05C730076AC3A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0BD3D41ED05C730076AC3A /* GameViewController.swift */; };
@@ -15,11 +18,15 @@
 		9E0BD3DD1ED05C730076AC3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E0BD3DB1ED05C730076AC3A /* LaunchScreen.storyboard */; };
 		9E0BD3E51ED05EE30076AC3A /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9E0BD3E41ED05EE30076AC3A /* GameScene.sks */; };
 		9E146C001EE0F561002CD2E7 /* Ball.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9E146BFF1EE0F561002CD2E7 /* Ball.sks */; };
+		9E6FC4A31EEA763F003AA484 /* MyParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9E6FC4A21EEA763F003AA484 /* MyParticle.sks */; };
 		9EF83A2A1ED1B34A00179681 /* MainMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9EF83A291ED1B34A00179681 /* MainMenu.sks */; };
 		9EF83A2C1ED1B37400179681 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF83A2B1ED1B37400179681 /* MainMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E0A20E91EEB493B0066FAD8 /* explosion.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = explosion.wav; sourceTree = "<group>"; };
+		9E0A20EC1EEB4A880066FAD8 /* shoot.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shoot.wav; sourceTree = "<group>"; };
+		9E0A20EE1EEB4BF70066FAD8 /* bg.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bg.mp3; sourceTree = "<group>"; };
 		9E0BD3C91ED05C730076AC3A /* Test Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Test Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E0BD3CC1ED05C730076AC3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E0BD3D21ED05C730076AC3A /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -30,6 +37,7 @@
 		9E0BD3DE1ED05C730076AC3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E0BD3E41ED05EE30076AC3A /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		9E146BFF1EE0F561002CD2E7 /* Ball.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Ball.sks; sourceTree = "<group>"; };
+		9E6FC4A21EEA763F003AA484 /* MyParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle.sks; sourceTree = "<group>"; };
 		9EF83A291ED1B34A00179681 /* MainMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainMenu.sks; sourceTree = "<group>"; };
 		9EF83A2B1ED1B37400179681 /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -45,6 +53,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E0A20EB1EEB494D0066FAD8 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				9E0A20EE1EEB4BF70066FAD8 /* bg.mp3 */,
+				9E0A20EC1EEB4A880066FAD8 /* shoot.wav */,
+				9E0A20E91EEB493B0066FAD8 /* explosion.wav */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
 		9E0BD3C01ED05C730076AC3A = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +86,7 @@
 				9E0BD3CC1ED05C730076AC3A /* AppDelegate.swift */,
 				9E0BD3D21ED05C730076AC3A /* GameScene.swift */,
 				9E0BD3D41ED05C730076AC3A /* GameViewController.swift */,
+				9E0A20EB1EEB494D0066FAD8 /* Sounds */,
 				9E146BFE1EE0F53D002CD2E7 /* Scenes */,
 				9E0BD3D61ED05C730076AC3A /* Main.storyboard */,
 				9E0BD3D91ED05C730076AC3A /* Assets.xcassets */,
@@ -83,6 +102,7 @@
 				9EF83A291ED1B34A00179681 /* MainMenu.sks */,
 				9E0BD3E41ED05EE30076AC3A /* GameScene.sks */,
 				9E146BFF1EE0F561002CD2E7 /* Ball.sks */,
+				9E6FC4A21EEA763F003AA484 /* MyParticle.sks */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -148,9 +168,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E146C001EE0F561002CD2E7 /* Ball.sks in Resources */,
+				9E0A20ED1EEB4A880066FAD8 /* shoot.wav in Resources */,
 				9EF83A2A1ED1B34A00179681 /* MainMenu.sks in Resources */,
+				9E0A20EA1EEB493B0066FAD8 /* explosion.wav in Resources */,
 				9E0BD3D81ED05C730076AC3A /* Main.storyboard in Resources */,
 				9E0BD3E51ED05EE30076AC3A /* GameScene.sks in Resources */,
+				9E6FC4A31EEA763F003AA484 /* MyParticle.sks in Resources */,
+				9E0A20EF1EEB4BF70066FAD8 /* bg.mp3 in Resources */,
 				9E0BD3DA1ED05C730076AC3A /* Assets.xcassets in Resources */,
 				9E0BD3DD1ED05C730076AC3A /* LaunchScreen.storyboard in Resources */,
 			);
