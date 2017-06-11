@@ -8,6 +8,7 @@
 
 import SpriteKit
 import GameplayKit
+import AVFoundation
 
 let wallMask : UInt32 = 0x1 << 0  // 1
 let ballMask : UInt32 = 0x1 << 1  // 2
@@ -36,6 +37,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(backgroundSound)
         
         backgroundSound.run(SKAction.play())
+        
+        do {
+            let sounds = ["shoot", "explosion"]
+            for sound in sounds {
+                let player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: sound, ofType: "wav")!))
+                player.prepareToPlay()
+            }
+        } catch {
+            
+        }
 
     }
     
@@ -121,10 +132,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func hitBall(ball: SKPhysicsBody) {
         print("We hit a ball")
         let spark = SKEmitterNode(fileNamed: "MyParticle")!
-        spark.position = ball.node!.position
-        self.addChild(spark)
-        ball.node?.removeFromParent()
+        guard let position = ball.node?.position else { return }
+            spark.position = position
+            self.addChild(spark)
+            ball.node?.removeFromParent()
         
-        self.run(SKAction.playSoundFileNamed("explosion.wav", waitForCompletion: true))
+            self.run(SKAction.playSoundFileNamed("explosion.wav", waitForCompletion: true))
     }
 }
