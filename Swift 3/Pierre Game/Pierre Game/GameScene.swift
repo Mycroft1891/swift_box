@@ -14,6 +14,8 @@ class GameScene: SKScene {
     let ground = Ground()
     let player = Player()
     var screenCenterY = CGFloat()
+    let initialPlayerPosition = CGPoint(x: 150, y: 250)
+    var playerProgress = CGFloat()
     
     override func didMove(to view: SKView) {
         self.anchorPoint = .zero
@@ -38,6 +40,8 @@ class GameScene: SKScene {
         
         self.physicsWorld.gravity = CGVector(dx: 0, dy: -5)
         screenCenterY = self.size.height / 2
+        
+        player.position = initialPlayerPosition
     }
     
     override func didSimulatePhysics() {
@@ -53,6 +57,8 @@ class GameScene: SKScene {
             cam.xScale = newScale
         }
         self.camera!.position = CGPoint(x: player.position.x, y: cameraYPosition)
+        playerProgress = player.position.x - initialPlayerPosition.x
+        ground.checkForReposition(playerProgress: playerProgress)
     }
     
     override func update(_ currentTime: TimeInterval) {
