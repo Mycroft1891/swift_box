@@ -33,6 +33,37 @@ class GameScene: SKScene {
         bee3.position = CGPoint(x: 200, y: 325)
         self.addChild(bee3)
         
+        // Spawn a bat:
+        let bat = Bat()
+        bat.position = CGPoint(x: 400, y: 200)
+        self.addChild(bat)
+        
+        // A blade:
+        let blade = Blade()
+        blade.position = CGPoint(x: 300, y: 76)
+        self.addChild(blade)
+        
+        // A mad fly:
+        let madFly = MadFly()
+        madFly.position = CGPoint(x: 50, y: 50)
+        self.addChild(madFly)
+        
+        // A bronze coin:
+        let bronzeCoin = Coin()
+        bronzeCoin.position = CGPoint(x: -50, y: 250)
+        self.addChild(bronzeCoin)
+        
+        // A gold coin:
+        let goldCoin = Coin()
+        goldCoin.position = CGPoint(x: 25, y: 250)
+        goldCoin.turnToGold()
+        self.addChild(goldCoin)
+        
+        // The powerup star:
+        let star = Star()
+        star.position = CGPoint(x: 250, y: 250)
+        self.addChild(star)
+        
         ground.position = CGPoint(x: -self.size.width * 2, y: 30)
         ground.size = CGSize(width: self.size.width * 6, height: 0)
         ground.createChildren()

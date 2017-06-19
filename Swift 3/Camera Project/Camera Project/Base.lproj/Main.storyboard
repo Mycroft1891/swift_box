@@ -52,6 +52,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="cameraButton" destination="GBa-87-wp4" id="Reb-6M-Jxk"/>
                         <outlet property="imageView" destination="Ea8-0S-sVD" id="1aV-xf-pp1"/>
