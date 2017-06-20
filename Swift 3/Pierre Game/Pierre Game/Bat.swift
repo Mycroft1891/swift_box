@@ -21,11 +21,6 @@ class Bat: SKSpriteNode, GameSprite {
         self.run(flyAnimation)
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     func createAnimation() {
         let flyFrames: [SKTexture] = [
             textureAtlas.textureNamed("bat"),
@@ -38,5 +33,9 @@ class Bat: SKSpriteNode, GameSprite {
     
     func onTap() {
         //todo
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
 }

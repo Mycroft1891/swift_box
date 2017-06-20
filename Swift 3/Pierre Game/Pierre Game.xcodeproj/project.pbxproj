@@ -23,6 +23,8 @@
 		9EDDD64E1EF7F41000D2A36E /* Bat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDDD64D1EF7F41000D2A36E /* Bat.swift */; };
 		9EDDD6501EF8062400D2A36E /* Blade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDDD64F1EF8062400D2A36E /* Blade.swift */; };
 		9EDDD6521EF8093100D2A36E /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDDD6511EF8093100D2A36E /* Coin.swift */; };
+		9EDDD6551EF9197F00D2A36E /* EncounterA.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9EDDD6541EF9197F00D2A36E /* EncounterA.sks */; };
+		9EDDD6571EF91B9100D2A36E /* EcounterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDDD6561EF91B9100D2A36E /* EcounterManager.swift */; };
 		9EE097901EF7DDA600B5A63C /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE0978F1EF7DDA600B5A63C /* Star.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		9EDDD64D1EF7F41000D2A36E /* Bat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bat.swift; sourceTree = "<group>"; };
 		9EDDD64F1EF8062400D2A36E /* Blade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blade.swift; sourceTree = "<group>"; };
 		9EDDD6511EF8093100D2A36E /* Coin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		9EDDD6541EF9197F00D2A36E /* EncounterA.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EncounterA.sks; sourceTree = "<group>"; };
+		9EDDD6561EF91B9100D2A36E /* EcounterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EcounterManager.swift; sourceTree = "<group>"; };
 		9EE0978F1EF7DDA600B5A63C /* Star.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +74,7 @@
 				9EDDD64B1EF7F3E800D2A36E /* MadFly.swift */,
 				9E347DE51EF32B3B006FEF21 /* Player.swift */,
 				9EE0978F1EF7DDA600B5A63C /* Star.swift */,
+				9EDDD6561EF91B9100D2A36E /* EcounterManager.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -99,6 +104,7 @@
 				9E621C6E1EF2253800D7E33F /* GameScene.swift */,
 				9E621C701EF2253800D7E33F /* GameViewController.swift */,
 				9E96F00E1EF29B9E00F79AEA /* GameSprite.swift */,
+				9EDDD6531EF9193F00D2A36E /* Encounters */,
 				9E347DE71EF32B4A006FEF21 /* Classes */,
 				9E621C721EF2253900D7E33F /* Main.storyboard */,
 				9E621C751EF2253900D7E33F /* Assets.xcassets */,
@@ -106,6 +112,14 @@
 				9E621C7A1EF2253900D7E33F /* Info.plist */,
 			);
 			path = "Pierre Game";
+			sourceTree = "<group>";
+		};
+		9EDDD6531EF9193F00D2A36E /* Encounters */ = {
+			isa = PBXGroup;
+			children = (
+				9EDDD6541EF9197F00D2A36E /* EncounterA.sks */,
+			);
+			name = Encounters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +185,7 @@
 				9E621C741EF2253900D7E33F /* Main.storyboard in Resources */,
 				9E621C6B1EF2253800D7E33F /* GameScene.sks in Resources */,
 				9E621C761EF2253900D7E33F /* Assets.xcassets in Resources */,
+				9EDDD6551EF9197F00D2A36E /* EncounterA.sks in Resources */,
 				9E621C791EF2253900D7E33F /* LaunchScreen.storyboard in Resources */,
 				9E621C6D1EF2253800D7E33F /* Actions.sks in Resources */,
 			);
@@ -187,6 +202,7 @@
 				9E96F0111EF29C3500F79AEA /* Bee.swift in Sources */,
 				9EDDD64C1EF7F3E800D2A36E /* MadFly.swift in Sources */,
 				9E96F00F1EF29B9E00F79AEA /* GameSprite.swift in Sources */,
+				9EDDD6571EF91B9100D2A36E /* EcounterManager.swift in Sources */,
 				9E621C6F1EF2253800D7E33F /* GameScene.swift in Sources */,
 				9EDDD64E1EF7F41000D2A36E /* Bat.swift in Sources */,
 				9EDDD6521EF8093100D2A36E /* Coin.swift in Sources */,
@@ -319,10 +335,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8KU532725H;
 				INFOPLIST_FILE = "Pierre Game/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.luna.Pierre-Game";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -332,10 +350,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8KU532725H;
 				INFOPLIST_FILE = "Pierre Game/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.luna.Pierre-Game";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

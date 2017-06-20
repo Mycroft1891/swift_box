@@ -23,11 +23,6 @@ class Star: SKSpriteNode, GameSprite {
         self.run(pulseAnimation)
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     func createAnimations() {
         let pulseOutGroup = SKAction.group([
                 SKAction.fadeAlpha(to: 0.85, duration: 0.8),
@@ -47,5 +42,9 @@ class Star: SKSpriteNode, GameSprite {
     
     func onTap() {
         // todo
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
 }

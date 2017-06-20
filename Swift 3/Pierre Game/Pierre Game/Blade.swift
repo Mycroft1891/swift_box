@@ -22,11 +22,6 @@ class Blade: SKSpriteNode, GameSprite {
         self.run(spinAnimation)
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     func createAnimation() {
         let spinFrames: [SKTexture] = [
             textureAtlas.textureNamed("blade"),
@@ -34,13 +29,13 @@ class Blade: SKSpriteNode, GameSprite {
         ]
         let spinAction = SKAction.animate(with: spinFrames, timePerFrame: 0.07)
         spinAnimation = SKAction.repeatForever(spinAction)
-        
-        
     }
-    
-    
     
     func onTap() {
         // todo
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
 }

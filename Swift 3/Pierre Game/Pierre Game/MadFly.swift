@@ -21,11 +21,6 @@ class MadFly: SKSpriteNode, GameSprite {
         self.run(flyAnimatiion)
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     func createAnimation() {
         let flyFrames : [SKTexture] = [
             textureAtlas.textureNamed("madfly"),
@@ -38,5 +33,9 @@ class MadFly: SKSpriteNode, GameSprite {
     
     func onTap() {
         // todo
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
 }

@@ -23,11 +23,6 @@ class Bee: SKSpriteNode, GameSprite {
         self.physicsBody?.affectedByGravity = false
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     func createAnimations() {
         
         let beeFrames : [SKTexture] = [
@@ -41,5 +36,9 @@ class Bee: SKSpriteNode, GameSprite {
     
     func onTap() {
         // todo
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
 }

@@ -32,11 +32,6 @@ class Player: SKSpriteNode, GameSprite {
         self.physicsBody?.allowsRotation = false
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     func update() {
         guard self.flapping else { return }
             var forceToApply = maxFlappingForce
@@ -93,5 +88,9 @@ class Player: SKSpriteNode, GameSprite {
     
     func onTap() {
         
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
 }

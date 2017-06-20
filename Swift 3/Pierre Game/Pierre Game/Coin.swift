@@ -20,16 +20,15 @@ class Coin: SKSpriteNode, GameSprite {
         self.physicsBody?.affectedByGravity = false
     }
     
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        fatalError("init(coder:) has not been implemented")
-    }
-
     func turnToGold() {
         self.texture = textureAtlas.textureNamed("coin-gold")
     }
+    
     func onTap() {
         // todo
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
 }
