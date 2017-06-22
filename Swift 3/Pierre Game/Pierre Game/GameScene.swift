@@ -13,10 +13,13 @@ class GameScene: SKScene {
     let cam = SKCameraNode()
     let ground = Ground()
     let player = Player()
-    var screenCenterY = CGFloat()
     let initialPlayerPosition = CGPoint(x: 150, y: 250)
-    var playerProgress = CGFloat()
     let encounterManager = EncounterManager()
+    let powerUpStar = Star()
+
+    var screenCenterY = CGFloat()
+    var playerProgress = CGFloat()
+    var nextEncounterSpawnPosition = CGFloat(150)
     
     override func didMove(to view: SKView) {
         self.anchorPoint = .zero
@@ -34,6 +37,9 @@ class GameScene: SKScene {
         player.position = initialPlayerPosition
         self.addChild(player)
         
+        powerUpStar.position = CGPoint(x: -2000, y: -2000)
+        self.addChild(powerUpStar)
+        
         encounterManager.addEncountersToScene(gameScene: self)
         encounterManager.encounters[0].position = CGPoint(x: 400, y: 330)
     }
@@ -50,9 +56,25 @@ class GameScene: SKScene {
             cam.yScale = newScale
             cam.xScale = newScale
         }
+        
         self.camera!.position = CGPoint(x: player.position.x, y: cameraYPosition)
         playerProgress = player.position.x - initialPlayerPosition.x
         ground.checkForReposition(playerProgress: playerProgress)
+        
+        if player.position.x > nextEncounterSpawnPosition {
+            encounterManager.placeNextEncounter(currentXPos: nextEncounterSpawnPosition)
+            nextEncounterSpawnPosition += 1200
+            
+            let starRoll = Int(arc4random_uniform(10))
+            if starRoll == 0 {
+                if abs(player.position.x - powerUpStar.position.x) > 1200 {
+                    let randomYPos = 50 + CGFloat(arc4random_uniform(400))
+                    powerUpStar.position = CGPoint(x: nextEncounterSpawnPosition, y: randomYPos)
+                    powerUpStar.physicsBody?.angularVelocity = 0
+                    powerUpStar.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
+                }
+            }
+        }
     }
     
     override func update(_ currentTime: TimeInterval) {

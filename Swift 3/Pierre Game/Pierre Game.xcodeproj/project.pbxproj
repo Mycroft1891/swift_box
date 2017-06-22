@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E2D8DB41EFA8AE800A5C0AD /* EncounterB.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9E2D8DB31EFA8AE800A5C0AD /* EncounterB.sks */; };
+		9E2D8DB61EFA8BFC00A5C0AD /* EncounterC.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9E2D8DB51EFA8BFC00A5C0AD /* EncounterC.sks */; };
 		9E347DE41EF3252F006FEF21 /* Ground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E347DE31EF3252F006FEF21 /* Ground.swift */; };
 		9E347DE61EF32B3B006FEF21 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E347DE51EF32B3B006FEF21 /* Player.swift */; };
 		9E621C691EF2253800D7E33F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E621C681EF2253800D7E33F /* AppDelegate.swift */; };
@@ -29,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E2D8DB31EFA8AE800A5C0AD /* EncounterB.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EncounterB.sks; sourceTree = "<group>"; };
+		9E2D8DB51EFA8BFC00A5C0AD /* EncounterC.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EncounterC.sks; sourceTree = "<group>"; };
 		9E347DE31EF3252F006FEF21 /* Ground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ground.swift; sourceTree = "<group>"; };
 		9E347DE51EF32B3B006FEF21 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		9E621C651EF2253800D7E33F /* Pierre Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pierre Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				9EDDD6541EF9197F00D2A36E /* EncounterA.sks */,
+				9E2D8DB31EFA8AE800A5C0AD /* EncounterB.sks */,
+				9E2D8DB51EFA8BFC00A5C0AD /* EncounterC.sks */,
 			);
 			name = Encounters;
 			sourceTree = "<group>";
@@ -182,8 +188,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E2D8DB41EFA8AE800A5C0AD /* EncounterB.sks in Resources */,
 				9E621C741EF2253900D7E33F /* Main.storyboard in Resources */,
 				9E621C6B1EF2253800D7E33F /* GameScene.sks in Resources */,
+				9E2D8DB61EFA8BFC00A5C0AD /* EncounterC.sks in Resources */,
 				9E621C761EF2253900D7E33F /* Assets.xcassets in Resources */,
 				9EDDD6551EF9197F00D2A36E /* EncounterA.sks in Resources */,
 				9E621C791EF2253900D7E33F /* LaunchScreen.storyboard in Resources */,
