@@ -34,6 +34,9 @@ class EncounterManager {
             }
             encounters.append(encounterNode)
             saveSpritePosition(node: encounterNode)
+            encounterNode.enumerateChildNodes(withName: "gold") { (node: SKNode, stop: UnsafeMutablePointer) in
+                (node as? Coin)?.turnToGold()
+            }
         }
     }
         
