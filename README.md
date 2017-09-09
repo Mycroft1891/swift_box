@@ -1,14 +1,14 @@
 # Swift Box
 
-A place to backup my Swift Projects securely in a single place.
+Build iOS, MacOS and iPadOS apps using Swift.
 
-## Project List (Swift 4)
+## Project List
 
-* [E-commerce](./ios/ECommerce/README.md)
-* [Window Shopper](./ios/WindowShopper/README.md)
-* [Dev Profile](./ios/WindowShopper/README.md)
+* [E-commerce](./ios/ECommerce)
+* [Window Shopper](./ios/WindowShopper)
+* [Dev Profile](./ios/WindowShopper)
 * [Soccer League](./ios/SoccerLeague/)
-* [Slack Clone](./ios/SlackClone/README.md)
+* [Slack Clone](./ios/SlackClone)
 
 ## Project List (Swift 3) (pending migration)
 

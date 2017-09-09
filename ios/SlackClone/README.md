@@ -1,5 +1,5 @@
 # Slack Clone
 
-**Objective of this Project**
+## Objective of this Project
 
 * Use cocoa pods
