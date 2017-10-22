@@ -6,6 +6,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -85,8 +86,166 @@
             </objects>
             <point key="canvasLocation" x="-79.200000000000003" y="133.5832083958021"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="3zM-es-vw3">
+            <objects>
+                <viewController id="paN-jS-9fk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q5c-ms-dSw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="desiredLeagueBG" translatesAutoresizingMaskIntoConstraints="NO" id="kWt-J9-S8A">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Bh8-WI-i5O">
+                                <rect key="frame" x="20" y="125" width="374" height="156"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9J-Mf-69r" customClass="BorderButton" customModule="Soccer_League" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="42"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                        <state key="normal" title="Mens">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EwN-3q-OUF" customClass="BorderButton" customModule="Soccer_League" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="57" width="374" height="42"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                        <state key="normal" title="Womens">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Cv-Y7-9ti" customClass="BorderButton" customModule="Soccer_League" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="114" width="374" height="42"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                        <state key="normal" title="Co-ed">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swooshLogo" translatesAutoresizingMaskIntoConstraints="NO" id="rPG-Aq-1Ac">
+                                <rect key="frame" x="148" y="20" width="119" height="20"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desired League:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fq7-5V-AHj">
+                                <rect key="frame" x="145.66666666666666" y="55" width="123.66666666666666" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEc-vw-Eyr" customClass="BorderButton" customModule="Soccer_League" customModuleProvider="target">
+                                <rect key="frame" x="20" y="674" width="374" height="42"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Iu5-eg-GXc" firstAttribute="bottom" secondItem="tEc-vw-Eyr" secondAttribute="bottom" constant="20" id="2c6-Fd-3s9"/>
+                            <constraint firstItem="kWt-J9-S8A" firstAttribute="top" secondItem="q5c-ms-dSw" secondAttribute="top" id="9eV-pv-6hS"/>
+                            <constraint firstItem="Fq7-5V-AHj" firstAttribute="top" secondItem="rPG-Aq-1Ac" secondAttribute="bottom" constant="15" id="BNq-17-WYp"/>
+                            <constraint firstItem="Fq7-5V-AHj" firstAttribute="centerX" secondItem="q5c-ms-dSw" secondAttribute="centerX" id="Cjf-Lk-rWD"/>
+                            <constraint firstItem="Bh8-WI-i5O" firstAttribute="top" secondItem="Fq7-5V-AHj" secondAttribute="bottom" constant="50" id="EiW-ne-KtC"/>
+                            <constraint firstItem="tEc-vw-Eyr" firstAttribute="leading" secondItem="Iu5-eg-GXc" secondAttribute="leading" constant="20" id="OVE-vZ-be9"/>
+                            <constraint firstItem="kWt-J9-S8A" firstAttribute="bottom" secondItem="Iu5-eg-GXc" secondAttribute="bottom" id="Qal-xX-kHT"/>
+                            <constraint firstItem="Iu5-eg-GXc" firstAttribute="trailing" secondItem="Bh8-WI-i5O" secondAttribute="trailing" constant="20" id="SES-Du-vBj"/>
+                            <constraint firstItem="Bh8-WI-i5O" firstAttribute="leading" secondItem="Iu5-eg-GXc" secondAttribute="leading" constant="20" id="SUF-cG-tPi"/>
+                            <constraint firstItem="kWt-J9-S8A" firstAttribute="leading" secondItem="Iu5-eg-GXc" secondAttribute="leading" id="WeM-M2-bl7"/>
+                            <constraint firstItem="kWt-J9-S8A" firstAttribute="trailing" secondItem="Iu5-eg-GXc" secondAttribute="trailing" id="YWs-3Y-K3s"/>
+                            <constraint firstItem="rPG-Aq-1Ac" firstAttribute="top" secondItem="Iu5-eg-GXc" secondAttribute="top" id="euX-8A-wl7"/>
+                            <constraint firstItem="rPG-Aq-1Ac" firstAttribute="centerX" secondItem="q5c-ms-dSw" secondAttribute="centerX" id="gpg-gi-Rue"/>
+                            <constraint firstItem="Iu5-eg-GXc" firstAttribute="trailing" secondItem="tEc-vw-Eyr" secondAttribute="trailing" constant="20" id="hMM-pk-hDZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Iu5-eg-GXc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LBo-ZQ-3S3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="620" y="133"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="K87-Kk-6Ic">
+            <objects>
+                <viewController id="4kE-wh-j1a" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l58-8Q-hqz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beginnerBallerBG" translatesAutoresizingMaskIntoConstraints="NO" id="VAj-fP-4Rs">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="cau-Uq-Iqb">
+                                <rect key="frame" x="20" y="125" width="374" height="42"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAF-eq-zNP" customClass="BorderButton" customModule="Soccer_League" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="179" height="42"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                        <state key="normal" title="Beginner">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chb-fW-tXL" customClass="BorderButton" customModule="Soccer_League" customModuleProvider="target">
+                                        <rect key="frame" x="195" y="0.0" width="179" height="42"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                        <state key="normal" title="Pro">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swooshLogo" translatesAutoresizingMaskIntoConstraints="NO" id="b5a-rH-xiN">
+                                <rect key="frame" x="147.66666666666666" y="20" width="118.99999999999997" height="20"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am a:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z39-a5-Hjq">
+                                <rect key="frame" x="181.33333333333334" y="55" width="51.666666666666657" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flx-e1-aTn" customClass="BorderButton" customModule="Soccer_League" customModuleProvider="target">
+                                <rect key="frame" x="20" y="674" width="374" height="42"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="FINISH">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VAj-fP-4Rs" firstAttribute="leading" secondItem="QfB-yd-Apc" secondAttribute="leading" id="4VD-zr-CeJ"/>
+                            <constraint firstItem="cau-Uq-Iqb" firstAttribute="leading" secondItem="QfB-yd-Apc" secondAttribute="leading" constant="20" id="BQb-yk-mcS"/>
+                            <constraint firstItem="QfB-yd-Apc" firstAttribute="trailing" secondItem="flx-e1-aTn" secondAttribute="trailing" constant="20" id="BVx-qY-v02"/>
+                            <constraint firstItem="VAj-fP-4Rs" firstAttribute="top" secondItem="l58-8Q-hqz" secondAttribute="top" id="E0g-Bp-7v9"/>
+                            <constraint firstItem="QfB-yd-Apc" firstAttribute="bottom" secondItem="VAj-fP-4Rs" secondAttribute="bottom" id="GuZ-za-gLZ"/>
+                            <constraint firstItem="z39-a5-Hjq" firstAttribute="centerX" secondItem="l58-8Q-hqz" secondAttribute="centerX" id="HA7-b3-tfB"/>
+                            <constraint firstItem="flx-e1-aTn" firstAttribute="leading" secondItem="QfB-yd-Apc" secondAttribute="leading" constant="20" id="Ih9-Ga-wpQ"/>
+                            <constraint firstItem="z39-a5-Hjq" firstAttribute="top" secondItem="b5a-rH-xiN" secondAttribute="bottom" constant="15" id="KK8-Az-GYE"/>
+                            <constraint firstItem="cau-Uq-Iqb" firstAttribute="top" secondItem="z39-a5-Hjq" secondAttribute="bottom" constant="50" id="Vy3-8L-pL3"/>
+                            <constraint firstItem="QfB-yd-Apc" firstAttribute="bottom" secondItem="flx-e1-aTn" secondAttribute="bottom" constant="20" id="cis-Gp-hHD"/>
+                            <constraint firstItem="QfB-yd-Apc" firstAttribute="trailing" secondItem="cau-Uq-Iqb" secondAttribute="trailing" constant="20" id="cjA-AH-GP3"/>
+                            <constraint firstItem="b5a-rH-xiN" firstAttribute="centerX" secondItem="l58-8Q-hqz" secondAttribute="centerX" id="h40-9v-OQY"/>
+                            <constraint firstItem="b5a-rH-xiN" firstAttribute="top" secondItem="l58-8Q-hqz" secondAttribute="top" constant="20" id="rVt-Tk-bcc"/>
+                            <constraint firstItem="QfB-yd-Apc" firstAttribute="trailing" secondItem="VAj-fP-4Rs" secondAttribute="trailing" id="uIj-KZ-ByR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QfB-yd-Apc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BeP-2O-l5G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1321.7391304347827" y="132.88043478260872"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="beginnerBallerBG" width="414" height="736"/>
+        <image name="desiredLeagueBG" width="414" height="736"/>
         <image name="swooshLogo" width="119" height="20"/>
         <image name="welcomeScreenBG" width="414" height="736"/>
     </resources>
