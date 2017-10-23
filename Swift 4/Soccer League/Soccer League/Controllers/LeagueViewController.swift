@@ -41,4 +41,10 @@ class LeagueViewController: UIViewController {
         nextButton.isEnabled = true
     }
     
+    // MARK: Segue handling
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let skillVC = segue.destination as? SkillViewController else { return }
+        skillVC.player = player
+    }
+    
 }
