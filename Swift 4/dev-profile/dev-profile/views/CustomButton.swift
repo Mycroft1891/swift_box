@@ -1,5 +1,5 @@
 //
-//  profileImage.swift
+//  CustomButton.swift
 //  dev-profile
 //
 //  Created by Alexander on 10/24/17.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ProfileImage: UIImageView {
-    
+class CustomButton: UIButton {
+
     override func awakeFromNib() {
         super.awakeFromNib()
         layer.cornerRadius = 10.0
