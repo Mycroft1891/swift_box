@@ -1,0 +1,26 @@
+//
+//  profileImage.swift
+//  dev-profile
+//
+//  Created by Alexander on 10/24/17.
+//  Copyright © 2017 Alexander. All rights reserved.
+//
+
+import UIKit
+
+class ProfileImage: UIImageView {
+
+    /*
+    // Only override draw() if you perform custom drawing.
+    // An empty implementation adversely affects performance during animation.
+    override func draw(_ rect: CGRect) {
+        // Drawing code
+    }
+    */
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        layer.cornerRadius = 2.5
+    }
+
+}
