@@ -28,7 +28,7 @@ class ViewController: UIViewController, gameOverDelegate {
     }
 
     @IBAction func menuButtonPressed(_ sender: AnyObject) {
-        // 1 = hiragana | 2 = katakan | 3 = how to play
+        // 1 = hiragana | 2 = katakana | 3 = how to play
         switch sender.tag {
             case 1:
                 customSegue(isHiragana: true)
@@ -58,7 +58,6 @@ class ViewController: UIViewController, gameOverDelegate {
     }
     
     func shareAction(isTwitter: Bool) {
-        
         let socialMedia: String = isTwitter ? "Twitter" : "Facebook"
         let service: String = isTwitter ? SLServiceTypeTwitter : SLServiceTypeFacebook
         

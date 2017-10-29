@@ -14,16 +14,8 @@ protocol gameOverDelegate {
 
 class KanaViewController: UIViewController {
     
+    // MARK: IBOutlets & Variables
     var delegate: gameOverDelegate?
-    
-    var hiragana    : Bool  = true
-    var answerIndex : Int   = 0
-    var questions   : [Int] = []
-    var seconds     : Int   = 60
-    var timer       : Timer = Timer()
-    
-    var lifeArray = ["♥️","♥️","♥️","♥️","♥️"]
-    var score : Int = 0
     
     @IBOutlet var choiceArray: [UIButton]!
     @IBOutlet weak var questionDisplay: UILabel!
@@ -31,7 +23,15 @@ class KanaViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var timeCounter: UILabel!
     
-    let romanjiArray : [String] = [
+    var hiragana    : Bool  = true
+    var rightAnswer : Int   = 0
+    var questions   : [Int] = []
+    var seconds     : Int   = 60
+    var timer       : Timer = Timer()
+    var score       : Int   = 0
+    var lifeArray = ["♥️","♥️","♥️","♥️","♥️"]
+    
+    let romajiArray : [String] = [
         "KA", "KI", "KU", "KE", "KO",
         "SA", "SHI", "SU", "SE", "SO",
         "TA", "CHI", "TSU", "TE", "TO"
@@ -51,6 +51,7 @@ class KanaViewController: UIViewController {
     
     var kana : [String] = []
 
+    // MARK: ViewController Setup
     override func viewDidLoad() {
         super.viewDidLoad()
         kana = hiragana ? hiraganaArray : katakanaArray
@@ -62,25 +63,25 @@ class KanaViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    // MARK: IBActions and Functions
     @IBAction func answerButtonPressed(_ sender: AnyObject) {
         checkAnswer(buttonIndex: sender.tag - 1)
     }
     
     func checkAnswer(buttonIndex: Int) {
-        print("Answer: \(answerIndex) | Question: \(questions[buttonIndex])")
-        if answerIndex == questions[buttonIndex]  {
+        print("Answer: \(rightAnswer) | Question: \(questions[buttonIndex])")
+        if rightAnswer == questions[buttonIndex]  {
             score += 1
             seconds += 2
         } else {
             lifeArray.removeLast()
         }
-        
-        questions = []
         pickRandomQuestionAndAnswer()
-        lifeArray.count <= 0 ? gameOver() : print("nothing")
+        lifeArray.count <= 0 ? gameOver() : print("still alive")
     }
     
     func pickRandomQuestionAndAnswer() {
+        questions = []
         while questions.count < 4 {
             let randomNumber : Int = Int(arc4random_uniform(UInt32(kana.count)))
             if !questions.contains(randomNumber) {
@@ -89,16 +90,15 @@ class KanaViewController: UIViewController {
         }
         print(questions)
         let randomAnswer = Int(arc4random_uniform(UInt32(questions.count)))
-        answerIndex = questions[randomAnswer]
+        rightAnswer = questions[randomAnswer]
         configureUI()
     }
     
     func configureUI() {
-        
         for (index, choice) in questions.enumerated() {
             choiceArray[index].setTitle(kana[choice], for: .normal)
         }
-        questionDisplay.text = romanjiArray[answerIndex]
+        questionDisplay.text = romajiArray[rightAnswer]
         scoreLabel.text = " Score: " + String(score)
         liveLabel.text = " " + lifeArray.joined(separator: "")
     }
