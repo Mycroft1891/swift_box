@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		112F9C751FAFA33300A022EC /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112F9C741FAFA33300A022EC /* GradientView.swift */; };
+		1182CAE4251B872A00B9E5B4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1182CAE3251B872A00B9E5B4 /* Alamofire */; };
+		1182CAE8251B878800B9E5B4 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 1182CAE7251B878800B9E5B4 /* SwiftyJSON */; };
+		1182CAEC251B883700B9E5B4 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 1182CAEB251B883700B9E5B4 /* SocketIO */; };
+		11BF56831FA6C43A00B246C5 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BF56821FA6C43A00B246C5 /* ChatViewController.swift */; };
+		11BF56851FA6C44400B246C5 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BF56841FA6C44400B246C5 /* ChannelViewController.swift */; };
+		11E75AF11FA212E700ADE822 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E75AF01FA212E700ADE822 /* AppDelegate.swift */; };
+		11E75AF61FA212E700ADE822 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11E75AF41FA212E700ADE822 /* Main.storyboard */; };
+		11E75AF81FA212E700ADE822 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11E75AF71FA212E700ADE822 /* Assets.xcassets */; };
+		11E75AFB1FA212E700ADE822 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11E75AF91FA212E700ADE822 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		112F9C741FAFA33300A022EC /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		11BF56821FA6C43A00B246C5 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		11BF56841FA6C44400B246C5 /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
+		11E75AED1FA212E700ADE822 /* slack-clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "slack-clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		11E75AF01FA212E700ADE822 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		11E75AF51FA212E700ADE822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		11E75AF71FA212E700ADE822 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		11E75AFA1FA212E700ADE822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		11E75AFC1FA212E700ADE822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		11E75AEA1FA212E700ADE822 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1182CAE8251B878800B9E5B4 /* SwiftyJSON in Frameworks */,
+				1182CAEC251B883700B9E5B4 /* SocketIO in Frameworks */,
+				1182CAE4251B872A00B9E5B4 /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		111FF8DE1FA217E2009D4A82 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				11BF56821FA6C43A00B246C5 /* ChatViewController.swift */,
+				11BF56841FA6C44400B246C5 /* ChannelViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		112F9C731FAFA30100A022EC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				112F9C741FAFA33300A022EC /* GradientView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		11E75AE41FA212E700ADE822 = {
+			isa = PBXGroup;
+			children = (
+				11E75AEF1FA212E700ADE822 /* slack-clone */,
+				11E75AEE1FA212E700ADE822 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		11E75AEE1FA212E700ADE822 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				11E75AED1FA212E700ADE822 /* slack-clone.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		11E75AEF1FA212E700ADE822 /* slack-clone */ = {
+			isa = PBXGroup;
+			children = (
+				112F9C731FAFA30100A022EC /* Views */,
+				111FF8DE1FA217E2009D4A82 /* Controller */,
+				11E75AF01FA212E700ADE822 /* AppDelegate.swift */,
+				11E75AF41FA212E700ADE822 /* Main.storyboard */,
+				11E75AF71FA212E700ADE822 /* Assets.xcassets */,
+				11E75AF91FA212E700ADE822 /* LaunchScreen.storyboard */,
+				11E75AFC1FA212E700ADE822 /* Info.plist */,
+			);
+			path = "slack-clone";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		11E75AEC1FA212E700ADE822 /* slack-clone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11E75AFF1FA212E700ADE822 /* Build configuration list for PBXNativeTarget "slack-clone" */;
+			buildPhases = (
+				11E75AE91FA212E700ADE822 /* Sources */,
+				11E75AEA1FA212E700ADE822 /* Frameworks */,
+				11E75AEB1FA212E700ADE822 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "slack-clone";
+			packageProductDependencies = (
+				1182CAE3251B872A00B9E5B4 /* Alamofire */,
+				1182CAE7251B878800B9E5B4 /* SwiftyJSON */,
+				1182CAEB251B883700B9E5B4 /* SocketIO */,
+			);
+			productName = "slack-clone";
+			productReference = 11E75AED1FA212E700ADE822 /* slack-clone.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		11E75AE51FA212E700ADE822 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = Alexander;
+				TargetAttributes = {
+					11E75AEC1FA212E700ADE822 = {
+						CreatedOnToolsVersion = 9.0.1;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 11E75AE81FA212E700ADE822 /* Build configuration list for PBXProject "slack-clone" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 11E75AE41FA212E700ADE822;
+			packageReferences = (
+				1182CAE2251B872A00B9E5B4 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				1182CAE6251B878800B9E5B4 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				1182CAEA251B883700B9E5B4 /* XCRemoteSwiftPackageReference "socket" */,
+			);
+			productRefGroup = 11E75AEE1FA212E700ADE822 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				11E75AEC1FA212E700ADE822 /* slack-clone */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		11E75AEB1FA212E700ADE822 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11E75AFB1FA212E700ADE822 /* LaunchScreen.storyboard in Resources */,
+				11E75AF81FA212E700ADE822 /* Assets.xcassets in Resources */,
+				11E75AF61FA212E700ADE822 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		11E75AE91FA212E700ADE822 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11E75AF11FA212E700ADE822 /* AppDelegate.swift in Sources */,
+				11BF56831FA6C43A00B246C5 /* ChatViewController.swift in Sources */,
+				112F9C751FAFA33300A022EC /* GradientView.swift in Sources */,
+				11BF56851FA6C44400B246C5 /* ChannelViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		11E75AF41FA212E700ADE822 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11E75AF51FA212E700ADE822 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		11E75AF91FA212E700ADE822 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11E75AFA1FA212E700ADE822 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		11E75AFD1FA212E700ADE822 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		11E75AFE1FA212E700ADE822 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		11E75B001FA212E700ADE822 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8KU532725H;
+				INFOPLIST_FILE = "slack-clone/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.luna.slack-clone";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "slack-clone/Supporting Files/slack-clone-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		11E75B011FA212E700ADE822 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8KU532725H;
+				INFOPLIST_FILE = "slack-clone/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.luna.slack-clone";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "slack-clone/Supporting Files/slack-clone-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		11E75AE81FA212E700ADE822 /* Build configuration list for PBXProject "slack-clone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11E75AFD1FA212E700ADE822 /* Debug */,
+				11E75AFE1FA212E700ADE822 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11E75AFF1FA212E700ADE822 /* Build configuration list for PBXNativeTarget "slack-clone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11E75B001FA212E700ADE822 /* Debug */,
+				11E75B011FA212E700ADE822 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1182CAE2251B872A00B9E5B4 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.0;
+			};
+		};
+		1182CAE6251B878800B9E5B4 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		1182CAEA251B883700B9E5B4 /* XCRemoteSwiftPackageReference "socket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1182CAE3251B872A00B9E5B4 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1182CAE2251B872A00B9E5B4 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		1182CAE7251B878800B9E5B4 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1182CAE6251B878800B9E5B4 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		1182CAEB251B883700B9E5B4 /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1182CAEA251B883700B9E5B4 /* XCRemoteSwiftPackageReference "socket" */;
+			productName = SocketIO;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 11E75AE51FA212E700ADE822 /* Project object */;
+}
