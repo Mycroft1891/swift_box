@@ -1,4 +1,4 @@
-# Swift Box
+# Swift
 
 Build iOS, MacOS and iPadOS apps using Swift.
 
